@@ -23,3 +23,8 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: Newman
+      uses: matt-ball/newman-action@v0.2.4
+      with:
+        collection: ./WeatherForecast.postman_collection.json
+        insecure: true
