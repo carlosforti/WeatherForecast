@@ -32,13 +32,13 @@ namespace WeatherForecast.UnitTest.Controllers
             var controller = new WeatherForecastController(useCase.Object);
             var result = await controller.GetWeatherForecast(1, ThermometricScales.Celsius);
 
-            var objectResultAssertion = result.Should().BeOfType<OkObjectResult>();
+            var objectResultAssertion = result.Should().BeOfType<ObjectResult>();
 
             objectResultAssertion.Which.StatusCode.Should()
                 .Be(StatusCodes.Status200OK);
 
             objectResultAssertion.Which.Value.Should()
-                .BeEquivalentTo(expectedResult);
+                .BeNull();
         }
 
         [Fact]
