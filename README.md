@@ -1,5 +1,3 @@
-![.NET](https://github.com/carlosforti/WeatherForecast/workflows/.NET/badge.svg?branch=master)
-
 # Weather Forecast Api
 
 This repository have the pourpose of training my team in building effective tests and pass through some issues we find during the development, such as mapping errors, dependency injection, logical error, test implementation not following business and more.
